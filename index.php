@@ -22,11 +22,12 @@
 </head>
 
 <body>
-    <form>
+    <form action="index.php" method="get">
         <label> Username: </label><br>
         <input type="text" name="username" /> <br>
         <label> Password: </label><br>
-        <input type="password" name="password" />
+        <input type="password" name="password" /> <br>
+        <input type="submit" value="Log in">
 
     </form>
 </body>
@@ -34,6 +35,7 @@
 </html>
 
 <?php
-echo "Hello World";
+echo $_GET['username'] . "<br>"; 
+echo "{$_GET['password']} <br>";
 
 ?>
