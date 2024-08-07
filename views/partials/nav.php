@@ -10,12 +10,13 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="/php-practice/"
-                            class=" <?= currentPage('/php-practice/') ?  $clicked : $notClicked;?> px-3 py-2 text-sm font-medium   hover:rounded-md"
+                            class=" <?= currentPage('/php-practice/') ?  $clicked : $notClicked?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
                             aria-current="page">Home</a>
-                        <a href="/php-practice/about.php"
-                            class=" <?= currentPage('/php-practice/about.php')?  $clicked : $notClicked; ?>  px-3 py-2 text-sm font-medium  hover:bg-gray-700  hover:rounded-md hover:text-white">About</a>
-                        <a href="/php-practice/contact.php"
-                            class="<?= currentPage('/php-practice/contact.php')?  $clicked : $notClicked;  ?>  px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md">Contacts</a>
+                        <a href="/php-practice/about"
+                            class=" <?= currentPage('/php-practice/about') ?  $clicked : $notClicked?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
+                            aria-current="page">About</a>
+                        <a href="/php-practice/contact"
+                            class="<?= currentPage('/php-practice/contact')?  $clicked : $notClicked  ?>  px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md">Contacts</a>
                     </div>
                 </div>
             </div>
@@ -98,9 +99,9 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/php-practice/" class=" block px-3 py-2 text-base font-medium text-white"
                 aria-current="page">Home</a>
-            <a href="/php-practice/about.php"
+            <a href="/php-practice/about"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-            <a href="/php-practice/contact.php"
+            <a href="/php-practice/contact"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contacts</a>
 
         </div>
