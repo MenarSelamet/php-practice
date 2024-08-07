@@ -10,12 +10,12 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="/php-practice/"
-                            class=" <?= $currentPage === '/php-practice/'?  $clicked : 'tex-gray-300';?> px-3 py-2 text-sm font-medium   hover:rounded-md"
+                            class=" <?= currentPage('/php-practice/') ?  $clicked : $notClicked;?> px-3 py-2 text-sm font-medium   hover:rounded-md"
                             aria-current="page">Home</a>
                         <a href="/php-practice/about.php"
-                            class=" <?= $currentPage === '/php-practice/about.php'?  $clicked : 'tex-gray-300'; ?>  px-3 py-2 text-sm font-medium  hover:bg-gray-700  hover:rounded-md hover:text-white">About</a>
+                            class=" <?= currentPage('/php-practice/about.php')?  $clicked : $notClicked; ?>  px-3 py-2 text-sm font-medium  hover:bg-gray-700  hover:rounded-md hover:text-white">About</a>
                         <a href="/php-practice/contact.php"
-                            class="<?= $currentPage === '/php-practice/contact.php'?  $clicked : 'tex-gray-300';  ?>  px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md">Contacts</a>
+                            class="<?= currentPage('/php-practice/contact.php')?  $clicked : $notClicked;  ?>  px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md">Contacts</a>
                     </div>
                 </div>
             </div>

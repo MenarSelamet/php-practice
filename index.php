@@ -1,7 +1,8 @@
 <?php
-
+require 'functions.php';
 $heading = "Home";
-$clicked = "rounded-md bg-gray-900 text-white";
+// $clicked = "rounded-md bg-gray-900 text-white";
+// $notClicked = "tex-gray-300";
 
 // function dumpAndDie($value) {
 // echo"<pre>";
@@ -11,10 +12,8 @@ $clicked = "rounded-md bg-gray-900 text-white";
 // }
 
 // dumpAndDie($_SERVER["REQUEST_URI"]);
+// $currentPage = $_SERVER["REQUEST_URI"];
 
-$currentPage = $_SERVER["REQUEST_URI"];
-
-echo $currentPage;
 
 require "views/index.view.php";
 
