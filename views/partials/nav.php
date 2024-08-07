@@ -9,12 +9,13 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/php-practice/" class="<?= $clicked ?> px-3 py-2 text-sm font-medium text-white"
+                        <a href="/php-practice/"
+                            class=" <?= $currentPage === '/php-practice/'?  $clicked : 'tex-gray-300';?> px-3 py-2 text-sm font-medium   hover:rounded-md"
                             aria-current="page">Home</a>
                         <a href="/php-practice/about.php"
-                            class=" <?= $clicked ?> px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+                            class=" <?= $currentPage === '/php-practice/about.php'?  $clicked : 'tex-gray-300'; ?>  px-3 py-2 text-sm font-medium  hover:bg-gray-700  hover:rounded-md hover:text-white">About</a>
                         <a href="/php-practice/contact.php"
-                            class="<?= $clicked ?> px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contacts</a>
+                            class="<?= $currentPage === '/php-practice/contact.php'?  $clicked : 'tex-gray-300';  ?>  px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md">Contacts</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +96,7 @@
     <div class="md:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/php-practice/" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            <a href="/php-practice/" class=" block px-3 py-2 text-base font-medium text-white"
                 aria-current="page">Home</a>
             <a href="/php-practice/about.php"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
