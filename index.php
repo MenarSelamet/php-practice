@@ -1,23 +1,38 @@
 <?php
 require 'functions.php';
 
-$currentURI = $_SERVER["REQUEST_URI"];
+$currentURI = parse_url($_SERVER["REQUEST_URI"])['path'];
 $baseURI = "/php-practice";
+// dumpAndDie(parse_url($currentURI));
+
+// $query = parse_url($currentURI);
+// echo $query["query"];
 
 echo "Current URI: " . $currentURI . "<br>";
 
-if ($currentURI === $baseURI . "/" || $currentURI === $baseURI) {
-    echo "Loading index.php<br>";
-    require "controllers/index.php";
-} else if ($currentURI === $baseURI . "/about") {
-    echo "Loading about.php<br>";
-    require "controllers/about.php";
-} else if ($currentURI === $baseURI . "/contact") {
-    echo "Loading contact.php<br>";
-    require "controllers/contact.php";
+
+$routes = [
+    $baseURI . "/"=>  "controllers/index.php",
+    $baseURI . "/about"=>  "controllers/about.php",
+    $baseURI . "/contact"=>  "controllers/contact.php",
+   
+];
+
+
+if (array_key_exists($currentURI, $routes)) {
+    require $routes[$currentURI]; 
 } else {
-    // Handle 404 not found
-    header("HTTP/1.0 404 Not Found");
-    echo "Page not found";
-}
-?>
+    http_response_code(404);
+     require "views/404.php";
+     die();
+ };
+
+// if ($currentURI === $baseURI . "/" || $currentURI === $baseURI) {
+//     require "controllers/index.php";
+// } else if ($currentURI === $baseURI . "/about") {
+//     require "controllers/about.php";
+// } else if ($currentURI === $baseURI . "/contact") {
+//     require "controllers/contact.php";
+// } else {
+//     echo "Page not found";
+// };
