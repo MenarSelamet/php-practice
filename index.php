@@ -29,13 +29,36 @@ require 'functions.php';
 
 // dumpAndDie($maya);
 
-$dsn = "mysql:host=localhost;port=3306;dbname=myapp;charset=utf8mb4";
+class Database {
 
-$pdo = new PDO($dsn, 'root');
+    public $connection;
 
-$statement = $pdo->prepare('select * from untitled_table_1');   
-$statement->execute();
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+       public function __construct() {
+
+               $dsn = "mysql:host=localhost;port=3306;dbname=myapp;charset=utf8mb4";
+
+            $this -> connection =  new PDO($dsn, 'root');
+        }
+    public function query ($query) {
+
+     
+
+
+ 
+
+        $statement = $this-> connection->prepare($query);   
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+}
+
+
+
+
+// dumpAndDie($posts);
+
+$db = new Database();
+$posts = $db ->query('select id, title from untitled_table_1 where id > 1');
 
 foreach ($posts as $post) {
     echo "<li>" . $post['id'] . "</li>";
