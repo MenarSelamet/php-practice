@@ -1,5 +1,7 @@
 <?php
 
+
+
 $currentURI = parse_url($_SERVER["REQUEST_URI"])['path'];
 $baseURI = "/php-practice";
 // dumpAndDie(parse_url($currentURI));
@@ -24,6 +26,8 @@ function abort($code = 404) {
 }
 
 function routeToController ($currentURI, $routes) { 
+     $clicked = "rounded-md bg-gray-900 text-white";
+    $notClicked = "tex-gray-300";
     if (array_key_exists($currentURI, $routes)) {
     require $routes[$currentURI]; 
 } else {

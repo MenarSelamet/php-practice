@@ -1,6 +1,5 @@
 <?php 
 $heading = "Contact US";
-$clicked = "rounded-md bg-gray-900 text-white";
-$notClicked = "tex-gray-300";
+
 
 require "views/contact.view.php";
