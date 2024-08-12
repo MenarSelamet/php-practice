@@ -11,8 +11,8 @@ $config = require 'config.php';
 $db = new Database($config["database"],'root', '' );
 // dumpAndDie($_GET["id"]);
 $id = $_GET["id"];
-$query = "select * from posts where id = ?";
-$posts = $db ->query($query, [$id])->fetch();
+$query = "select * from posts where id = :id";
+$posts = $db ->query($query, ['id' => $id])->fetch();
 dumpAndDie($posts);
 
 // foreach ($posts as $post) {
