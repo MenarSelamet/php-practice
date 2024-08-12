@@ -48,7 +48,7 @@ class Database {
 
         $statement = $this-> connection->prepare($query);   
         $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $statement;
     }
 }
 
@@ -58,7 +58,7 @@ class Database {
 // dumpAndDie($posts);
 
 $db = new Database();
-$posts = $db ->query('select id, title from untitled_table_1 where id > 1');
+$posts = $db ->query('select id, title from untitled_table_1 ')->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($posts as $post) {
     echo "<li>" . $post['id'] . "</li>";
