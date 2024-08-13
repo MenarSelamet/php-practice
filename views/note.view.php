@@ -12,7 +12,7 @@
         <?php require "partials/nav.php"; ?>
         <?php require "partials/head.php"; ?>
         <?php require "partials/main.php"; ?>
-        <p><?= $note['body'] ?></p>
+        <p><?= htmlspecialchars($note['body']) ?></p>
         <p>
             <a href="/php-practice/notes" class="text-blue-700 hover:underline ">Go back to Notes </a>
         </p>
