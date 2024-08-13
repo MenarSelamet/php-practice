@@ -1,4 +1,5 @@
 <?php 
+require 'Validator.php';
 $heading = "Create Note";
 
 $config = require 'config.php';
@@ -10,12 +11,9 @@ $db = new Database($config["database"],'root', '' );
 if($_SERVER['REQUEST_METHOD'] === 'POST' ){
     
         $errors= [];
-    if (strlen($_POST['body']) === 0 ){
-        $errors['body'] = 'You have to fill this area!!';
-
-    };
-     if (strlen($_POST['body']) > 15 ){
-        $errors['body'] = 'The body can not be more than 15 character!';
+        $validator = new Validator();
+    if (!$validator -> string($_POST['body'], 1, 15)){
+        $errors['body'] = 'A body of no more than 15 characters is required.';
 
     };
         if (empty($errors)){
