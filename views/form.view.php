@@ -12,17 +12,6 @@
         <?php require "partials/nav.php"; ?>
         <?php require "partials/head.php"; ?>
         <?php require "partials/main.php"; ?>
-        <ul>
-            <?php foreach ($notes as $note) : ?>
-            <li>
-                <a href="/php-practice/note?id=<?= $note['id'] ?>" class=" text-blue-700 hover:underline">
-                    <?= $note['body'] ?>
-                </a>
-            </li>
-        </ul>
-        <?php endforeach; ?>
-
-        <a href="/php-practice/form" class="text-blue-700 hover:underline">Click here to Add a Note</a>
     </div>
 
 </body>
