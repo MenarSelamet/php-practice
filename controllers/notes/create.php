@@ -11,8 +11,8 @@ $db = new Database($config["database"],'root', '' );
 if($_SERVER['REQUEST_METHOD'] === 'POST' ){
     
         $errors= [];
-        $validator = new Validator();
-    if (!$validator -> string($_POST['body'], 1, 15)){
+        
+    if (!Validator::string($_POST['body'], 1, 15)){
         $errors['body'] = 'A body of no more than 15 characters is required.';
 
     };
@@ -26,4 +26,4 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' ){
 }
 
 
-require "views/note-form.view.php";
+require "views/notes/create.view.php";
