@@ -10,6 +10,3 @@ var_dump($value);
 echo "</pre";
   die();
 }
-
-// dumpAndDie($_SERVER["REQUEST_URI"]);
-// $currentPage = $_SERVER["REQUEST_URI"];
