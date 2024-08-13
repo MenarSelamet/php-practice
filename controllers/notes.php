@@ -4,7 +4,7 @@ $heading = "My Notes";
 $config = require 'config.php';
 $db = new Database($config["database"],'root', '' );
 $query = "select * from notes ";
-$notes = $db->query($query)->fetchAll();
+$notes = $db->query($query)->findAll();
 
 
 require "views/notes.view.php";
