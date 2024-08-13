@@ -12,8 +12,13 @@
         <?php require "partials/nav.php"; ?>
         <?php require "partials/head.php"; ?>
         <?php require "partials/main.php"; ?>
-    </div>
+        <form method="POST">
+            <label for="body">Description:</label><br>
+            <textarea type="text" name="body" id="body"></textarea><br>
+            <button type="submit">Create</button>
 
+        </form>
+    </div>
 </body>
 
 </html>

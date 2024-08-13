@@ -22,7 +22,7 @@
         </ul>
         <?php endforeach; ?>
 
-        <a href="/php-practice/form" class="text-blue-700 hover:underline">Click here to Add a Note</a>
+        <a href="/php-practice/notes/form" class="text-blue-700 hover:underline">Click here to Add a Note</a>
     </div>
 
 </body>
