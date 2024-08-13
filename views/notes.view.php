@@ -13,8 +13,12 @@
         <?php require "partials/head.php"; ?>
         <?php require "partials/main.php"; ?>
         <ul>
-            <?php  foreach ($notes as $note) : ?>
-            <li?><?= $note['body'] ?></li><br>
+            <?php foreach ($notes as $note) : ?>
+            <li>
+                <a href="/note?id=<?= $note['id'] ?>" class=" text-blue-700 hover:underline">
+                    <?= $note['body'] ?>
+                </a>
+            </li>
         </ul>
         <?php endforeach; ?>
     </div>

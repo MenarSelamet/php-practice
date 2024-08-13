@@ -17,6 +17,7 @@ $routes = [
     $baseURI . "/about"=>  "controllers/about.php",
     $baseURI . "/contact"=>  "controllers/contact.php",
     $baseURI . "/notes"=>  "controllers/notes.php",
+    $baseURI . "/note"=>  "controllers/note.php",
    
 ];
 
