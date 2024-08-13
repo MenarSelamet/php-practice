@@ -15,6 +15,9 @@
                         <a href="/php-practice/about"
                             class=" <?= currentPage('/php-practice/about') ?  $clicked : $notClicked?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
                             aria-current="page">About</a>
+                        <a href="/php-practice/notes"
+                            class=" <?= currentPage('/php-practice/notes') ?  $clicked : $notClicked?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
+                            aria-current="page">Notes</a>
                         <a href="/php-practice/contact"
                             class="<?= currentPage('/php-practice/contact')?  $clicked : $notClicked  ?>  px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md">Contacts</a>
                     </div>
