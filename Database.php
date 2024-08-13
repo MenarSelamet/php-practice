@@ -16,7 +16,7 @@ $this -> connection = new PDO($dsn, $username, $password, [PDO::ATTR_DEFAULT_FET
 public function query ($query, $params = []) {
 
 $statement = $this->connection->prepare($query);
-$statement->execute(  );
+$statement->execute( $params );
 return $statement;
 }
 }
