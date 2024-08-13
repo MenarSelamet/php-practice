@@ -12,6 +12,11 @@
         <?php require "partials/nav.php"; ?>
         <?php require "partials/head.php"; ?>
         <?php require "partials/main.php"; ?>
+        <ul>
+            <?php  foreach ($notes as $note) : ?>
+            <li?><?= $note['body'] ?></li><br>
+        </ul>
+        <?php endforeach; ?>
     </div>
 
 </body>
