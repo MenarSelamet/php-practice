@@ -5,7 +5,7 @@ function currentPage ($value) {
 }
 
 function authorize ($condition, $status) {
-   if(!$condition ){
+   if($condition ){
         abort($status); 
     };
  };
