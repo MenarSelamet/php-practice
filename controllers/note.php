@@ -1,16 +1,16 @@
 <?php 
 $heading = "Single Note";
-
+$currentUser = 3;
 $config = require 'config.php';
 $db = new Database($config["database"],'root', '' );
 $note = $db->query("select * from notes where id = :id", ['id' => $_GET["id"]])->fetch();
 
     if(!$note) {
-        abort(404);
+        abort(Response::NOT_FOUND);
     };
 
-    if($note['user_id'] != 3){
-        abort(403); 
+    if($note['user_id'] != $currentUser){
+        abort(Response::FORBIDDEN); 
     };
 
  
