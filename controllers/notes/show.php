@@ -1,4 +1,5 @@
 <?php 
+use Core\Database;
 $heading = "Single Note";
 $config = require base_path('config.php');
 $db = new Database($config["database"],'root', '' );
