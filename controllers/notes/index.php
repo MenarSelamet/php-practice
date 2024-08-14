@@ -6,5 +6,7 @@ $db = new Database($config["database"],'root', '' );
 $query = "select * from notes ";
 $notes = $db->query($query)->findAll();
 
-
-require "views/notes/index.view.php";
+view("notes/index.view.php", [
+    'heading' => 'My Notes',
+    'notes' => $notes
+]);

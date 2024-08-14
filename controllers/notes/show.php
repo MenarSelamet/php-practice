@@ -9,5 +9,7 @@ authorize($note['user_id'] != 2, Response::FORBIDDEN );
    
 
  
-
-require "views/notes/show.view.php";
+view("notes/show.view.php", [
+    'heading' => 'Note',
+    'note' => $note
+]);
