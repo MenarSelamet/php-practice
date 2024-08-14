@@ -10,9 +10,6 @@ $db = new Database($config["database"],'root', '' );
 
 
 if($_SERVER['REQUEST_METHOD'] === 'POST' ){
-    
-   
-        
     if (!Validator::string($_POST['body'], 1, 15)){
         $errors['body'] = 'A body of no more than 15 characters is required.';
 
@@ -22,6 +19,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' ){
         'body'=> htmlspecialchars($_POST['body']),
         'user_id'=> 2,
     ] ) ;
+
+    header('location: /notes');
+    exit();
     } 
 
 }

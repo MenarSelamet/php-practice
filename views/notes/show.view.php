@@ -14,8 +14,11 @@
         <?php require base_path("views/partials/main.php"); ?>
         <p><?= htmlspecialchars($note['body']) ?></p>
         <p>
-            <button>Delete</button>
-            <a href="/php-practice/notes" class="text-blue-700 hover:underline ">Go back to Notes </a>
+        <form class="mt-6" method="POST">
+            <input type="hidden" name="id" value="<?= $note['id'] ?>">
+            <button class="text-sm text-red-500">Delete</button>
+        </form>
+        <a href="/php-practice/notes" class="text-blue-700 hover:underline">Go back to Notes </a>
         </p>
     </div>
 
