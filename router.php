@@ -1,5 +1,7 @@
 <?php
 
+
+
 $currentURI = parse_url($_SERVER["REQUEST_URI"])['path'];
 $baseURI = "/php-practice";
 echo "Current URI: " . $currentURI . "<br>";
