@@ -2,7 +2,7 @@
 require 'Validator.php';
 $heading = "Create Note";
 
-$config = require 'config.php';
+$config = require base_path('config.php');
 $db = new Database($config["database"],'root', '' );
 
 

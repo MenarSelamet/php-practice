@@ -9,9 +9,9 @@
 
 <body class="h-full">
     <div class="min-h-full">
-        <?php require "views/partials/nav.php"; ?>
-        <?php require "views/partials/head.php"; ?>
-        <?php require "views/partials/main.php"; ?>
+        <?php require base_path("views/partials/nav.php"); ?>
+        <?php require base_path("views/partials/head.php"); ?>
+        <?php require base_path("views/partials/main.php"); ?>
         <p><?= htmlspecialchars($note['body']) ?></p>
         <p>
             <a href="/php-practice/notes" class="text-blue-700 hover:underline ">Go back to Notes </a>

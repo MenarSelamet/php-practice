@@ -9,9 +9,9 @@
 
 <body class="h-full">
     <div class="min-h-full">
-        <?php require "views/partials/nav.php"; ?>
-        <?php require "views/partials/head.php"; ?>
-        <?php require "views/partials/main.php"; ?>
+        <?php require base_path("views/partials/nav.php"); ?>
+        <?php require base_path("views/partials/head.php"); ?>
+        <?php require base_path("views/partials/main.php"); ?>
         <form method="POST">
             <div class="space-y-12">
                 <div class="border-b border-gray-900/10 pb-12">
