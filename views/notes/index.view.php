@@ -12,17 +12,23 @@
         <?php require base_path("views/partials/nav.php"); ?>
         <?php require base_path("views/partials/head.php"); ?>
         <?php require base_path("views/partials/main.php"); ?>
-        <ul>
-            <?php foreach ($notes as $note) : ?>
-            <li>
-                <a href="/php-practice/note?id=<?= $note['id'] ?>" class=" text-blue-700 hover:underline">
-                    <?= $note['body'] ?>
-                </a>
-            </li>
-        </ul>
-        <?php endforeach; ?>
+        <main>
+            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                <ul>
+                    <?php foreach ($notes as $note) : ?>
+                    <li>
+                        <a href="/php-practice/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:underline">
+                            <?= htmlspecialchars($note['body']) ?>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
 
-        <a href="/php-practice/notes/form" class="text-blue-700 hover:underline">Click here to Add a Note</a>
+                <p class="mt-6">
+                    <a href="/php-practice/notes/create" class="text-blue-500 hover:underline">Create Note</a>
+                </p>
+            </div>
+        </main>
     </div>
 
 </body>

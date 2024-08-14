@@ -10,16 +10,16 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <a href="/php-practice/"
-                            class=" <?= currentPage('/php-practice/') ?  $clicked : $notClicked?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
+                            class=" <?= urlIs('/php-practice/') ? 'text-white bg-gray-900 rounded' : ''?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
                             aria-current="page">Home</a>
                         <a href="/php-practice/about"
-                            class=" <?= currentPage('/php-practice/about') ?  $clicked : $notClicked?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
+                            class=" <?= urlIs('/php-practice/about') ? 'text-white bg-gray-900 rounded' : ''?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
                             aria-current="page">About</a>
                         <a href="/php-practice/notes"
-                            class=" <?= currentPage('/php-practice/notes') ?  $clicked : $notClicked?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
+                            class=" <?= urlIs('/php-practice/notes') ?  'text-white bg-gray-900 rounded' : ''?> px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md"
                             aria-current="page">Notes</a>
                         <a href="/php-practice/contact"
-                            class="<?= currentPage('/php-practice/contact')?  $clicked : $notClicked  ?>  px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md">Contacts</a>
+                            class="<?= urlIs('/php-practice/contact')?  'text-white bg-gray-900 rounded' : '' ?>  px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  hover:rounded-md">Contacts</a>
                     </div>
                 </div>
             </div>

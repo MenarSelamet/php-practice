@@ -1,11 +1,11 @@
-<?php 
+<?php
+
 use Core\Database;
-$heading = "My Notes";
 
 $config = require base_path('config.php');
-$db = new Database($config["database"],'root', '' );
-$query = "select * from notes ";
-$notes = $db->query($query)->findAll();
+$db = new Database($config['database']);
+
+$notes = $db->query('select * from notes where user_id = 1')->get();
 
 view("notes/index.view.php", [
     'heading' => 'My Notes',
