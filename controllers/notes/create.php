@@ -1,16 +1,16 @@
 <?php 
-require 'Validator.php';
+require base_path('Validator.php');
 $heading = "Create Note";
 
 $config = require base_path('config.php');
 $db = new Database($config["database"],'root', '' );
 
-
+     $errors= [];
 
 
 if($_SERVER['REQUEST_METHOD'] === 'POST' ){
     
-        $errors= [];
+   
         
     if (!Validator::string($_POST['body'], 1, 15)){
         $errors['body'] = 'A body of no more than 15 characters is required.';

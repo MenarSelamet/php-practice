@@ -9,9 +9,9 @@
 
 <body class="h-full">
     <div class="min-h-full">
-        <?php require base_path("partials/nav.php"); ?>
-        <?php require base_path("partials/head.php"); ?>
-        <?php require base_path("partials/main.php"); ?>
+        <?php require "partials/nav.php"; ?>
+        <?php require "partials/head.php"; ?>
+        <?php require "partials/main.php"; ?>
     </div>
 
 </body>
